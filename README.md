@@ -22,8 +22,4 @@ The app basically helps you in keeping a track of good mental health by analyzin
 
 ANIKET MISHRA
 
-KAHLID ZAHRA
 
-MOBASHERAH FALAK
-
-RAGHAV KAUSHAL
