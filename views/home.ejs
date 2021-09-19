@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/calender.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Homepage</title>
+</head>
+<body>
+    <header>
+        <img class="logo-img" src="img/logo.png" width="200" height="100" ALT="align box" ALIGN=CENTER>
+        <nav>
+            <ul>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="question">
+        <form action="/" method="post">
+            <input id="submit-day" name="submit-day" type="text" style="display: none;">
+            <h2>Hey, <%= name %>!</h2>
+            <h2>How do you feel today?</h2>
+            <div class="slidecontainer">
+                <input name="mood" type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            </div>
+            <div style="text-align:center;">
+                <button id="submit-btn">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="container">
+        <div class="calendar">
+          <div class="month">
+            <i class="fas fa-angle-left prev"></i>
+            <div class="date">
+              <h1></h1>
+              <p></p>
+            </div>
+            <i class="fas fa-angle-right next"></i>
+          </div>
+          <div class="weekdays">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+          </div>
+          <div class="days"></div>
+        </div>
+      </div>
+      <script>
+            var moods = <%-JSON.stringify(moods)%>
+      </script>
+      <script src="js/calender.js"></script>
+      <script src="js/home.js"></script>
+</body>
+</html>
